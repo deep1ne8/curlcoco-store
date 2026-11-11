@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /order-confirmed
+Disallow: /api/
+Sitemap: %%SITE_URL%%/sitemap.xml

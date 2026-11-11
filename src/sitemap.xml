@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>%%SITE_URL%%/</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
+  <url><loc>%%SITE_URL%%/shipping</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
+  <url><loc>%%SITE_URL%%/returns</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
+  <url><loc>%%SITE_URL%%/privacy</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
+  <url><loc>%%SITE_URL%%/terms</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
+  <url><loc>%%SITE_URL%%/contact</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
+</urlset>

@@ -1,0 +1,9 @@
+name = "curlcoco"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"
+
+# Bind the KV namespace in the Cloudflare dashboard (Settings → Bindings → KV → ORDERS),
+# or uncomment and add your namespace id:
+# [[kv_namespaces]]
+# binding = "ORDERS"
+# id = "<your-kv-namespace-id>"

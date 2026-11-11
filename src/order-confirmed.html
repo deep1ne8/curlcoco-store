@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<!-- @include head -->
+<title>Order confirmation | %%BRAND%%</title>
+<meta name="robots" content="noindex">
+</head>
+<body>
+<!-- @include header -->
+<main id="main" class="wrap prose">
+  <div id="confirm" aria-live="polite">
+    <div data-state="loading"><h1>Checking your payment…</h1><p>One moment while we confirm with Paystack.</p></div>
+    <div data-state="success" hidden>
+      <h1>Thank you, your order is in</h1>
+      <dl class="details">
+        <dt>Order reference</dt><dd id="order-ref"></dd>
+        <dt>Total paid</dt><dd id="order-total"></dd>
+        <dt>Confirmation sent to</dt><dd id="order-email"></dd>
+      </dl>
+      <h2>What happens next</h2>
+      <ol>
+        <li>We place your order with our supplier, normally within one working day.</li>
+        <li>You get an email with your tracking number as soon as it ships.</li>
+        <li>Estimated delivery: %%DELIVERY_ESTIMATE%%.</li>
+      </ol>
+      <p>You may cancel within 7 days of delivery. See <a href="/returns">Returns &amp; refunds</a>. Questions? <a href="/contact">Contact us</a> and quote your order reference.</p>
+    </div>
+    <div data-state="failed" hidden><h1>We couldn't confirm this payment</h1><p>If money left your account, don't worry: <a href="/contact">contact us</a> with the reference in your Paystack email and we'll sort it out. Otherwise you can <a href="/">try again</a>.</p></div>
+    <div data-state="missing" hidden><h1>No order found</h1><p>This page needs an order reference. <a href="/">Back to the shop</a>.</p></div>
+  </div>
+</main>
+<!-- @include footer -->
+</body>
+</html>
