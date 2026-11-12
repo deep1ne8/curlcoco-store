@@ -2,16 +2,14 @@
   "SITE_URL": "https://shop.deepevolution.za.net",
   "BRAND": "CurlCoco",
   "TAGLINE": "Curl tonight. Wake up wavy.",
-
-  "LEGAL_NAME": "TODO: your full legal name (sole proprietor) or registered company name",
+  "LEGAL_NAME": "E.S Daniels",
   "LEGAL_STATUS": "Sole proprietor trading as CurlCoco",
   "REG_NUMBER": "Not applicable (sole proprietor)",
   "VAT_STATUS": "Not VAT registered",
-  "PHYSICAL_ADDRESS": "TODO: physical address where you accept legal service (ECT Act s43)",
+  "PHYSICAL_ADDRESS": "Johannesburg, 1811, South Africa",
   "CONTACT_EMAIL": "TODO: hello@yourdomain",
-  "CONTACT_PHONE": "TODO: +27 ...",
-  "INFO_OFFICER": "TODO: your name (POPIA Information Officer)",
-
+  "CONTACT_PHONE": "+27 63 883 6068",
+  "INFO_OFFICER": "E.S Daniels",
   "PRODUCT_NAME": "Satin Heatless Curling Set",
   "PRICE_ZAR": 249,
   "DELIVERY_ESTIMATE": "TODO: e.g. 5–10 working days (confirm on the supplier listing)",
@@ -19,7 +17,6 @@
   "SPEC_ROD": "TODO: rod length and material, from the supplier listing",
   "SPEC_IN_BOX": "1 satin curling rod, 2 satin scrunchies, 1 claw clip (TODO: confirm)",
   "SPEC_WEIGHT": "TODO: e.g. about 100 g",
-
   "META_PIXEL_ID": "",
   "TIKTOK_PIXEL_ID": ""
 }
