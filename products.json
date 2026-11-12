@@ -1,0 +1,46 @@
+[
+  {
+    "sku": "curl-set",
+    "slug": "heatless-curling-set",
+    "status": "live",
+    "name": "Heatless Curling Set",
+    "category": "Hair",
+    "price": 249,
+    "tagline": "Wrap damp hair at night. Shake out soft waves in the morning.",
+    "summary": "A soft, cloth-covered foam rod you sleep in, with two scrunchie hair ties and a hair clip. No curling iron, no heat.",
+    "image": "/media/hero.webp",
+    "imageFallback": "/media/hero.jpg",
+    "imageAlt": "Pink heatless curling rod looped into a ribbon shape, with two scrunchie hair ties and a pink hair clip",
+    "gallery": [
+      { "src": "/media/end-closeup.jpg", "alt": "Close-up of the rod end, where the cloth cover is stitched closed" }
+    ],
+    "delivery": "11–18 days (about 2–3 weeks)",
+    "features": [
+      ["No heat tools", "The curl sets as your hair dries overnight, so there's no hot iron and no heat-protect spray step."],
+      ["Soft enough to sleep in", "A flexible foam rod with a soft cloth cover, plus two scrunchies to hold your hair in place."],
+      ["Five minutes at night", "Wrapping takes a few minutes once you've done it a couple of times. In the morning you unwrap and go."]
+    ],
+    "steps": [
+      ["Clip the rod on", "Lay the rod over the top of your head and secure the middle with the hair clip from the set."],
+      ["Wrap damp hair", "Twist sections around the rod on each side, working down. Damp, not soaking, works best."],
+      ["Tie off and sleep", "Secure each end with a scrunchie and go to bed."],
+      ["Unwrap and shake out", "Slide the rod out in the morning and loosen the waves with your fingers."]
+    ],
+    "fit": {
+      "yes": ["Your hair reaches your shoulders or longer", "You wrap it slightly damp and leave it in overnight", "You want soft waves, not tight ringlets"],
+      "no": ["Your hair is too short to wrap around a rod", "You need it this week: delivery takes 11–18 days", "You expect the same result on every hair type"],
+      "note": "Results vary with hair length, thickness and texture."
+    },
+    "specs": [
+      ["Included", "1 curling rod, 2 scrunchie hair ties and 1 hair clip"],
+      ["Rod", "Foam rod with a soft cloth cover, about 3 cm thick and 100 cm long (sizes may vary by 1–2 cm)"],
+      ["Colour", "Pink, as shown (colour may look slightly different on your screen)"],
+      ["Made in", "China"],
+      ["Brand", "Unbranded"]
+    ],
+    "faq": [
+      ["Is a clip included?", "Yes. The set comes with one hair clip to hold the rod in place, plus two scrunchie hair ties for the ends."],
+      ["Will it work on short hair?", "It works best on hair that reaches your shoulders or longer. Very short hair can't wrap around the rod."]
+    ]
+  }
+]

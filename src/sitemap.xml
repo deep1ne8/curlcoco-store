@@ -6,4 +6,5 @@
   <url><loc>%%SITE_URL%%/privacy</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
   <url><loc>%%SITE_URL%%/terms</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
   <url><loc>%%SITE_URL%%/contact</loc><lastmod>%%BUILD_DATE%%</lastmod></url>
+%%SITEMAP_PRODUCTS%%
 </urlset>

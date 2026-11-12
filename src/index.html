@@ -2,222 +2,60 @@
 <html lang="en-ZA">
 <head>
 <!-- @include head -->
-<title>%%PRODUCT_NAME%% — heat-free overnight curls | %%BRAND%%</title>
-<meta name="description" content="A heatless curling set you sleep in: wrap damp hair tonight, shake out waves tomorrow. %%PRICE_DISPLAY%%, free delivery in South Africa.">
+<title>%%BRAND%% · %%TAGLINE%%</title>
+<meta name="description" content="A small South African online shop. Free delivery, real delivery times and 7-day returns on every order.">
 <link rel="canonical" href="%%SITE_URL%%/">
-<meta property="og:type" content="product">
-<meta property="og:site_name" content="%%BRAND%%">
-<meta property="og:title" content="%%PRODUCT_NAME%% — %%TAGLINE%%">
-<meta property="og:description" content="Heat-free overnight curls. %%PRICE_DISPLAY%% with free delivery in South Africa.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="%%BRAND%% · %%TAGLINE%%">
+<meta property="og:description" content="A small South African online shop. Free delivery, real delivery times, 7-day returns.">
 <meta property="og:url" content="%%SITE_URL%%/">
 <meta property="og:image" content="%%SITE_URL%%/assets/img/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_ZA">
-<meta property="product:price:amount" content="%%PRICE_ZAR%%"><meta property="product:price:currency" content="ZAR">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"%%PRODUCT_NAME%%","brand":{"@type":"Brand","name":"%%BRAND%%"},
-"description":"Cloth-covered foam curling rod set for overnight curls without heat tools.","image":"%%SITE_URL%%/assets/img/og.png","sku":"curl-set",
-"offers":{"@type":"Offer","url":"%%SITE_URL%%/","priceCurrency":"ZAR","price":"%%PRICE_ZAR%%","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition",
-"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"ZAR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"ZA"}},
-"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"ZA","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":7,"returnMethod":"https://schema.org/ReturnByMail"}}}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"OnlineStore","name":"%%BRAND%%","url":"%%SITE_URL%%/","email":"%%CONTACT_EMAIL%%","areaServed":"ZA","logo":"%%SITE_URL%%/assets/brand/logo.svg"}</script>
 </head>
 <body>
-<div class="topbar"><div class="wrap">Free delivery in South Africa<span class="extra"> <span aria-hidden="true">·</span> Secure checkout with %%PAY_PROVIDER%% <span aria-hidden="true">·</span> 7-day cooling-off on every order</span></div></div>
 <!-- @include header -->
 <main id="main">
-  <section class="hero" aria-labelledby="hero-title">
+  <section class="hero">
     <div class="wrap">
-      <div class="hero-copy">
-        <p class="eyebrow">Heat-free overnight curls</p>
-        <h1 id="hero-title">Curl tonight.<br>Wake up wavy.</h1>
-        <p class="lead">A soft, cloth-covered curling rod you sleep in. Wrap damp hair before bed and shake out bouncy waves in the morning, with no curling iron and no early alarm.</p>
-        <div class="buy-box">
-          <div class="price-row"><span class="price">%%PRICE_DISPLAY%%</span><span class="price-note">Free delivery · 4-piece set</span></div>
-          <button class="btn btn-lg" type="button" id="hero-buy" data-add>Add to cart</button>
-          <ul class="trust">
-            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Secure payment by %%PAY_METHODS%%</span></li>
-            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3v3.5h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>Estimated delivery %%DELIVERY_ESTIMATE%%, tracked</span></li>
-            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h11a5 5 0 0 1 0 10H8"/><path d="M8 5 4 9l4 4"/></svg><span>7 days to change your mind after delivery</span></li>
-          </ul>
-        </div>
-      </div>
-      <figure class="hero-media">
-<!-- @if VIDEO -->
-        <video autoplay muted loop playsinline preload="metadata" poster="/media/hero-poster.jpg" aria-label="Wrapping hair around the curling rod at night and shaking out curls in the morning"><source src="/media/hero.mp4" type="video/mp4"></video>
-<!-- @else VIDEO -->
-<!-- @if PHOTO -->
-        <picture><source srcset="/media/hero.webp" type="image/webp"><img src="/media/hero.jpg" width="1040" height="1120" alt="Pink heatless curling rod looped into a ribbon shape, with two scrunchie hair ties and a pink hair clip" fetchpriority="high"></picture>
-<!-- @else PHOTO -->
-        <svg viewBox="0 0 520 560" role="img" aria-labelledby="ill-title">
-          <title id="ill-title">Illustration of the curling rod looped into a ribbon shape, with two scrunchies</title>
-          <defs>
-            <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4D6CB"/><stop offset="1" stop-color="#E9B9AA"/></linearGradient>
-            <linearGradient id="rod" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFDF9"/><stop offset="1" stop-color="#EFE2D3"/></linearGradient>
-            <radialGradient id="sc" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#C96A4F"/><stop offset="1" stop-color="#8A3A27"/></radialGradient>
-          </defs>
-          <rect width="520" height="560" fill="#FBF5EE"/>
-          <path d="M0 560V260a260 260 0 0 1 520 0v300z" fill="url(#bg)"/>
-          <g transform="translate(26 -18) scale(.9)">
-          <ellipse cx="260" cy="500" rx="200" ry="18" fill="#3B2A20" opacity=".12"/>
-          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M150 470C165 340 395 270 362 160C340 88 180 88 158 160C125 270 355 340 370 470" stroke="#D2B9A4" stroke-width="50"/>
-            <path d="M150 470C165 340 395 270 362 160C340 88 180 88 158 160C125 270 355 340 370 470" stroke="url(#rod)" stroke-width="44"/>
-            <g stroke-linecap="butt">
-              <path d="M169.3 227.9C215.8 303.7 358.3 368.6 370.0 470.0" stroke="#3B2A20" stroke-opacity=".14" stroke-width="62"/>
-              <path d="M169.3 227.9C215.8 303.7 358.3 368.6 370.0 470.0" stroke="#D2B9A4" stroke-width="50"/>
-              <path d="M169.3 227.9C215.8 303.7 358.3 368.6 370.0 470.0" stroke="url(#rod)" stroke-width="44"/>
-            </g>
-            <path d="M186 118C215 92 300 90 334 122" stroke="#fff" stroke-opacity=".85" stroke-width="7"/>
-          </g>
-          <g><g transform="rotate(-20 156 428) scale(1 .72) translate(0 166.4)"><g fill="url(#sc)"><circle cx="181.4" cy="418.7" r="15"/><circle cx="182.3" cy="433.9" r="15"/><circle cx="175.0" cy="447.2" r="15"/><circle cx="161.6" cy="454.4" r="15"/><circle cx="146.4" cy="453.2" r="15"/><circle cx="134.3" cy="444.0" r="15"/><circle cx="129.1" cy="429.7" r="15"/><circle cx="132.4" cy="414.9" r="15"/><circle cx="143.2" cy="404.2" r="15"/><circle cx="158.1" cy="401.1" r="15"/><circle cx="172.3" cy="406.5" r="15"/></g><circle cx="156" cy="428" r="27" fill="url(#sc)"/><g fill="none" stroke="#5E2416" stroke-opacity=".28" stroke-width="2"><path d="M168.0 427.3L193.9 425.7"/><path d="M166.5 433.9L189.1 446.6"/><path d="M161.6 438.6L173.8 461.6"/><path d="M155.0 440.0L152.9 465.9"/><path d="M148.7 437.5L132.9 458.2"/><path d="M144.7 432.1L120.2 440.9"/><path d="M144.3 425.3L119.0 419.5"/><path d="M147.6 419.4L129.4 400.8"/><path d="M153.6 416.2L148.3 390.8"/><path d="M160.3 416.8L169.7 392.5"/><path d="M165.7 420.9L186.7 405.6"/></g><circle cx="156" cy="428" r="13" fill="#F3E7DA" stroke="#D2B9A4" stroke-width="3"/></g><g transform="rotate(20 364 432) scale(1 .72) translate(0 168.0)"><g fill="url(#sc)"><circle cx="389.4" cy="441.3" r="15"/><circle cx="380.3" cy="453.5" r="15"/><circle cx="366.1" cy="458.9" r="15"/><circle cx="351.2" cy="455.8" r="15"/><circle cx="340.4" cy="445.1" r="15"/><circle cx="337.1" cy="430.3" r="15"/><circle cx="342.3" cy="416.0" r="15"/><circle cx="354.4" cy="406.8" r="15"/><circle cx="369.6" cy="405.6" r="15"/><circle cx="383.0" cy="412.8" r="15"/><circle cx="390.3" cy="426.1" r="15"/></g><circle cx="364" cy="432" r="27" fill="url(#sc)"/><g fill="none" stroke="#5E2416" stroke-opacity=".28" stroke-width="2"><path d="M373.6 439.2L394.5 454.7"/><path d="M368.2 443.2L377.4 467.6"/><path d="M361.5 443.7L356.0 469.2"/><path d="M355.5 440.5L337.2 458.9"/><path d="M352.3 434.6L326.9 440.2"/><path d="M352.7 427.8L328.4 418.8"/><path d="M356.8 422.4L341.1 401.6"/><path d="M363.1 420.0L361.2 394.1"/><path d="M369.7 421.5L382.1 398.6"/><path d="M374.5 426.2L397.3 413.7"/><path d="M376.0 432.8L401.9 434.6"/></g><circle cx="364" cy="432" r="13" fill="#F3E7DA" stroke="#D2B9A4" stroke-width="3"/></g></g>
-          </g>
-        </svg>
-<!-- @endif PHOTO -->
-<!-- @endif VIDEO -->
-        <figcaption class="media-tag">1 m foam rod · soft cloth cover · clip included</figcaption>
-      </figure>
+      <h1>%%TAGLINE%%</h1>
+      <p class="lead">A small South African shop. Every product page tells you exactly what's in the box, where it ships from and how long it really takes.</p>
+      <a class="btn" href="#shop">Shop the collection</a>
     </div>
   </section>
 
-  <section class="benefits" aria-labelledby="why-title">
+  <section id="shop" class="shop" aria-labelledby="shop-title">
     <div class="wrap">
-      <p class="eyebrow">Why go heatless</p>
-      <h2 id="why-title">Curls that form while you sleep</h2>
-      <div class="grid grid-3">
-        <div class="feature"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a6 6 0 0 0 6-6c0-4-3-5-3.5-9C11 7.500 6 11 6 15a6 6 0 0 0 6 6z"/><path d="M4 4l16 16"/></svg><h3>No heat tools</h3><p>The curl sets as your hair dries overnight, so there's no hot iron and no heat-protect spray step.</p></div>
-        <div class="feature"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><h3>Soft enough to sleep in</h3><p>A flexible foam rod with a soft cloth cover, plus two scrunchies to hold your hair in place.</p></div>
-        <div class="feature"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.500V12l3 2"/></svg><h3>Five minutes at night</h3><p>Wrapping takes a few minutes once you've done it a couple of times. In the morning you unwrap and go.</p></div>
-      </div>
+      <div class="section-head"><h2 id="shop-title">Shop</h2><span class="muted">%%PRODUCT_COUNT%%</span></div>
+      %%PRODUCT_GRID%%
     </div>
   </section>
 
-  <section class="band" aria-labelledby="how-title">
+  <section class="promise" aria-labelledby="promise-title">
     <div class="wrap">
-      <p class="eyebrow">How it works</p>
-      <h2 id="how-title">Four steps, mostly asleep</h2>
-      <ol class="steps">
-        <li><h3>Clip the rod on</h3><p>Lay the rod over the top of your head and secure the middle with the hair clip from the set.</p></li>
-        <li><h3>Wrap damp hair</h3><p>Twist sections around the rod on each side, working down. Damp, not soaking, works best.</p></li>
-        <li><h3>Tie off and sleep</h3><p>Secure each end with a scrunchie and go to bed.</p></li>
-        <li><h3>Unwrap and shake out</h3><p>Slide the rod out in the morning and loosen the waves with your fingers.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section aria-labelledby="fit-title">
-    <div class="wrap">
-      <p class="eyebrow">Straight talk</p>
-      <h2 id="fit-title">Is it right for your hair?</h2>
-      <div class="grid grid-2">
-        <div class="card fit"><h3>Works best when</h3><ul class="ticks">
-          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.500 4.500L19 7.500"/></svg><span>Your hair reaches your shoulders or longer</span></li>
-          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.500 4.500L19 7.500"/></svg><span>You wrap it slightly damp and leave it in overnight</span></li>
-          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.500 4.500L19 7.500"/></svg><span>You want soft waves, not tight ringlets</span></li></ul></div>
-        <div class="card fit"><h3>Probably not for you if</h3><ul class="ticks no">
-          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Your hair is too short to wrap around a rod</span></li>
-          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>You need it this week: delivery takes %%DELIVERY_ESTIMATE%%</span></li>
-          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>You expect the same result on every hair type</span></li></ul></div>
+      <h2 id="promise-title" class="sr-only">Our promise</h2>
+      <div class="promise-grid">
+        <div><h3>Free delivery</h3><p class="muted">On every order, anywhere in South Africa. The price you see is the price you pay.</p></div>
+        <div><h3>Honest delivery times</h3><p class="muted">We don't hold stock, so most items take 2–3 weeks. We tell you up front and send tracking.</p></div>
+        <div><h3>7 days to change your mind</h3><p class="muted">Cancel within 7 days of delivery for any reason. Faulty items are covered for 6 months.</p></div>
       </div>
-      <p class="small center">Results vary with hair length, thickness and texture.</p>
-    </div>
-  </section>
-
-  <section class="band" aria-labelledby="specs-title">
-    <div class="wrap split">
-      <div>
-        <p class="eyebrow">The details</p>
-        <h2 id="specs-title">What's in the box</h2>
-        <table class="specs"><tbody>
-          <tr><th scope="row">Included</th><td>%%SPEC_IN_BOX%%</td></tr>
-          <tr><th scope="row">Rod</th><td>%%SPEC_ROD%%</td></tr>
-          <tr><th scope="row">Colour</th><td>Pink, as shown (colour may look slightly different on your screen)</td></tr>
-          <tr><th scope="row">Made in</th><td>China</td></tr>
-          <tr><th scope="row">Brand</th><td>Unbranded product, sold by %%BRAND%%</td></tr>
-          <tr><th scope="row">Delivery</th><td>Free, %%DELIVERY_ESTIMATE%%. Ships from %%DISPATCH_FROM%% in the supplier's packaging.</td></tr>
-        </tbody></table>
-          <figure class="closeup"><img src="/media/end-closeup.jpg" width="488" height="612" loading="lazy" alt="Close-up of the rod end, where the cloth cover is stitched closed"><figcaption>The cloth cover is stitched closed at each end. Photos: supplier product photos.</figcaption></figure>
-      </div>
-      <div class="faq">
-        <p class="eyebrow">Questions</p>
-        <h2 id="faq-title">Before you buy</h2>
-        <details><summary>How long does delivery take?</summary><div><p>Estimated %%DELIVERY_ESTIMATE%%. We don't hold stock: your order ships from %%DISPATCH_FROM%%. We email your tracking number as soon as we have it. See <a href="/shipping">Shipping</a>.</p></div></details>
-        <details><summary>Can I return it?</summary><div><p>Yes. You have 7 days after delivery to cancel for any reason, and faulty items are covered for 6 months under the Consumer Protection Act. See <a href="/returns">Returns &amp; refunds</a>.</p></div></details>
-        <details><summary>How do I pay?</summary><div><p>By %%PAY_METHODS%% on %%PAY_PROVIDER%%'s secure page. We never see or store your card details.</p></div></details>
-        <details><summary>Is a clip included?</summary><div><p>Yes. The set comes with one hair clip to hold the rod in place, plus two scrunchie hair ties for the ends.</p></div></details>
-        <details><summary>Who are you?</summary><div><p>%%BRAND%% is a small South African online shop. Our full business details are on the <a href="/contact">Contact</a> page.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" aria-labelledby="cta-title">
-    <div class="wrap">
-      <h2 id="cta-title">Ready to wake up wavy?</h2>
-      <p>%%PRICE_DISPLAY%% with free delivery in South Africa.</p>
-      <button class="btn btn-lg btn-light" type="button" data-add>Add to cart</button>
     </div>
   </section>
 
   <section class="signup" aria-labelledby="news-title">
     <div class="wrap narrow">
-      <h2 id="news-title">Hair tips, no spam</h2>
-      <p>Styling tips and the occasional new product. Unsubscribe any time.</p>
+      <h2 id="news-title">New products, now and then</h2>
+      <p class="muted">An occasional email when something new arrives. No spam, unsubscribe any time.</p>
       <form data-signup novalidate>
         <label class="sr-only" for="news-email">Email address</label>
         <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
         <button class="btn" type="submit">Sign up</button>
-        <p role="status" class="small" aria-live="polite" style="flex-basis:100%;margin:0"></p>
+        <p role="status" class="muted small" aria-live="polite"></p>
       </form>
-      <p class="small">By signing up you agree to receive emails from %%BRAND%%. See our <a href="/privacy">Privacy Policy</a>.</p>
+      <p class="muted small">See our <a href="/privacy">Privacy Policy</a>.</p>
     </div>
   </section>
 </main>
-
-<div class="sticky-buy" aria-hidden="false">
-  <span><strong>%%PRICE_DISPLAY%%</strong> <span class="small">· free delivery</span></span>
-  <button class="btn" type="button" data-add>Add to cart</button>
-</div>
-
-<div class="drawer" id="cart" aria-hidden="true">
-  <div class="drawer-backdrop" data-close-cart></div>
-  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
-    <div class="drawer-head"><h2 id="cart-title" style="margin:0">Your cart</h2><button class="icon-btn" type="button" data-close-cart aria-label="Close cart">×</button></div>
-    <p id="cart-empty">Your cart is empty.</p>
-    <div id="cart-items" hidden>
-      <div class="line-item">
-        <div><strong>%%PRODUCT_NAME%%</strong><br><span class="small">%%PRICE_DISPLAY%% each</span></div>
-        <div class="qty" role="group" aria-label="Quantity">
-          <button type="button" id="qty-minus" aria-label="Remove one">−</button><output id="qty-out" aria-live="polite">1</output><button type="button" id="qty-plus" aria-label="Add one">+</button>
-        </div>
-        <strong id="line-total">%%PRICE_DISPLAY%%</strong>
-      </div>
-      <div class="totals"><span>Delivery</span><span>Free</span></div>
-      <div class="totals" style="border-top:1px solid var(--line)"><span>Total</span><span id="cart-total">%%PRICE_DISPLAY%%</span></div>
-    </div>
-    <form id="checkout-form" hidden>
-      <h3>Delivery details</h3>
-      <label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required maxlength="80">
-      <label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120">
-      <label for="f-phone">Mobile number (for the courier)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required pattern="^(\+27|0)[0-9 ]{9,12}$" title="A South African number, e.g. 082 123 4567">
-      <label for="f-street">Street address</label><input id="f-street" name="street" autocomplete="address-line1" required maxlength="120">
-      <label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" autocomplete="address-line2" required maxlength="80">
-      <div class="row2">
-        <div><label for="f-city">City / town</label><input id="f-city" name="city" autocomplete="address-level2" required maxlength="60"></div>
-        <div><label for="f-postal">Postal code</label><input id="f-postal" name="postal" autocomplete="postal-code" required pattern="^[0-9]{4}$" inputmode="numeric" title="4-digit postal code"></div>
-      </div>
-      <label for="f-province">Province</label>
-      <select id="f-province" name="province" autocomplete="address-level1" required>
-        <option value="">Choose…</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option>
-      </select>
-      <label class="check"><input type="checkbox" name="terms" required> <span>I accept the <a href="/terms" target="_blank" rel="noopener">Terms</a> and understand the estimated delivery time (%%DELIVERY_ESTIMATE%%).</span></label>
-      <label class="check"><input type="checkbox" name="marketing"> <span>Email me tips and offers (optional, unsubscribe any time).</span></label>
-      <p id="checkout-error" class="error" role="alert"></p>
-      <button class="btn btn-block" type="submit">Pay securely</button>
-      <p class="small" style="margin-top:var(--s2)">You'll be taken to our payment provider's secure page to pay.</p>
-    </form>
-  </div>
-</div>
 <!-- @include footer -->
 </body>
 </html>

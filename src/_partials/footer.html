@@ -1,24 +1,52 @@
 <footer class="site-footer">
   <div class="wrap">
-    <p class="foot-brand">curlcoco</p>
-    <nav aria-label="Store policies">
-      <ul>
-        <li><a href="/shipping">Shipping</a></li>
-        <li><a href="/returns">Returns &amp; refunds</a></li>
-        <li><a href="/privacy">Privacy (POPIA)</a></li>
-        <li><a href="/terms">Terms</a></li>
-        <li><a href="/contact">Contact &amp; business details</a></li>
-        <li><a href="#" data-open-consent>Cookie settings</a></li>
-      </ul>
-    </nav>
+    <div class="foot-grid">
+      <div><a class="logo logo-sm" href="/" aria-label="%%BRAND%% home"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2H33a5 5 0 0 1 5 5V33a5 5 0 0 1-5 5H20A18 18 0 0 1 20 2Z"/></svg></a>
+        <p class="muted">%%TAGLINE%%</p></div>
+      <nav aria-label="Shop"><h2>Shop</h2><ul><li><a href="/#shop">All products</a></li><li><a href="/shipping">Delivery</a></li><li><a href="/returns">Returns &amp; refunds</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/contact">Contact &amp; business details</a></li><li><a href="/privacy">Privacy (POPIA)</a></li><li><a href="/terms">Terms</a></li><li><a href="#" data-open-consent>Cookie settings</a></li></ul></nav>
+    </div>
     <p class="biz">%%BRAND%% is operated by %%LEGAL_NAME%%, %%LEGAL_STATUS%%. %%PHYSICAL_ADDRESS%%. %%CONTACT_EMAIL%% · %%CONTACT_PHONE%%. Prices in South African rand. © %%YEAR%%</p>
   </div>
 </footer>
-<div class="consent" id="consent" role="dialog" aria-labelledby="consent-title" hidden>
-  <p id="consent-title"><strong>Cookies for ads?</strong> We'd like to use Meta and TikTok cookies to measure our ads. They're off unless you say yes. <a href="/privacy#cookies">Details</a></p>
-  <div class="actions">
-    <button class="btn" type="button" data-consent="yes">Yes, that's fine</button>
-    <button class="btn btn-quiet" type="button" data-consent="no">No thanks</button>
+
+<div class="drawer" id="cart" aria-hidden="true">
+  <div class="drawer-backdrop" data-close-cart></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
+    <div class="drawer-head"><h2 id="cart-title">Bag</h2><button class="icon-btn" type="button" data-close-cart aria-label="Close bag">×</button></div>
+    <p id="cart-empty" class="muted">Your bag is empty.</p>
+    <ul id="cart-lines" class="lines" hidden></ul>
+    <div id="cart-totals" hidden>
+      <div class="totals"><span>Delivery</span><span>Free</span></div>
+      <div class="totals total"><span>Total</span><span id="cart-total">R0</span></div>
+    </div>
+    <form id="checkout-form" hidden novalidate>
+      <h3>Delivery details</h3>
+      <label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required maxlength="80">
+      <label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120">
+      <label for="f-phone">Mobile number (for the courier)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required pattern="^(\+27|0)[0-9 ]{9,12}$" title="A South African number, e.g. 082 123 4567">
+      <label for="f-street">Street address</label><input id="f-street" name="street" autocomplete="address-line1" required maxlength="120">
+      <label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" autocomplete="address-line2" required maxlength="80">
+      <div class="row2">
+        <div><label for="f-city">City / town</label><input id="f-city" name="city" autocomplete="address-level2" required maxlength="60"></div>
+        <div><label for="f-postal">Postal code</label><input id="f-postal" name="postal" autocomplete="postal-code" required pattern="^[0-9]{4}$" inputmode="numeric" title="4-digit postal code"></div>
+      </div>
+      <label for="f-province">Province</label>
+      <select id="f-province" name="province" autocomplete="address-level1" required>
+        <option value="">Choose…</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option>
+      </select>
+      <label class="check"><input type="checkbox" name="terms" required> <span>I accept the <a href="/terms" target="_blank" rel="noopener">Terms</a> and the delivery times shown for each item.</span></label>
+      <label class="check"><input type="checkbox" name="marketing"> <span>Email me news and offers (optional, unsubscribe any time).</span></label>
+      <p id="checkout-error" class="error" role="alert"></p>
+      <button class="btn btn-block" type="submit">Pay securely</button>
+      <p class="muted small">You'll pay on %%PAY_PROVIDER%%'s secure page. We never see your card details.</p>
+    </form>
   </div>
 </div>
+
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-title" hidden>
+  <p id="consent-title"><strong>Cookies for ads?</strong> We'd like to use Meta and TikTok cookies to measure our ads. They're off unless you say yes. <a href="/privacy#cookies">Details</a></p>
+  <div class="actions"><button class="btn btn-sm" type="button" data-consent="yes">Yes, that's fine</button><button class="btn btn-sm btn-ghost" type="button" data-consent="no">No thanks</button></div>
+</div>
+<script type="application/json" id="catalog">%%CATALOG_JSON%%</script>
 <script src="/assets/js/site.js" defer></script>

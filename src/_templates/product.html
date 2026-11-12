@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<!-- @include head -->
+<title>%%P_NAME%% · %%BRAND%%</title>
+<meta name="description" content="%%P_SUMMARY%% %%P_PRICE%%, free delivery in South Africa.">
+<link rel="canonical" href="%%SITE_URL%%/products/%%P_SLUG%%">
+<meta property="og:type" content="product">
+<meta property="og:title" content="%%P_NAME%% · %%BRAND%%">
+<meta property="og:description" content="%%P_TAGLINE%%">
+<meta property="og:url" content="%%SITE_URL%%/products/%%P_SLUG%%">
+<meta property="og:image" content="%%P_OG_IMAGE%%">
+<meta property="product:price:amount" content="%%P_PRICE_NUM%%"><meta property="product:price:currency" content="ZAR">
+<script type="application/ld+json">%%P_JSONLD%%</script>
+</head>
+<body class="has-sticky">
+<!-- @include header -->
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Shop</a> <span aria-hidden="true">/</span> <span>%%P_CATEGORY%%</span></nav>
+    <div class="pd">
+      <div class="pd-media">
+        <div class="pd-frame">%%P_IMAGE%%</div>
+        %%P_GALLERY%%
+      </div>
+      <div class="pd-info">
+        <h1>%%P_NAME%%</h1>
+        <p class="pd-price">%%P_PRICE%%</p>
+        <p class="lead">%%P_TAGLINE%%</p>
+        <p class="muted">%%P_SUMMARY%%</p>
+        <button class="btn btn-block btn-lg" type="button" id="pd-add" data-add="%%P_SKU%%">Add to bag</button>
+        <ul class="pd-facts">
+          <li><strong>Free delivery</strong>, estimated %%P_DELIVERY%%</li>
+          <li>Ships from %%DISPATCH_FROM%%, with tracking</li>
+          <li>7 days to change your mind after delivery</li>
+          <li>Pay securely on %%PAY_PROVIDER%%</li>
+        </ul>
+      </div>
+    </div>
+    %%P_FEATURES%%
+    %%P_STEPS%%
+    %%P_FIT%%
+    %%P_SPECS%%
+    %%P_FAQ%%
+  </div>
+</main>
+<div class="sticky-buy"><span><strong>%%P_PRICE%%</strong> <span class="muted small">· free delivery</span></span><button class="btn" type="button" data-add="%%P_SKU%%">Add to bag</button></div>
+<!-- @include footer -->
+</body>
+</html>
