@@ -176,3 +176,6 @@ body.has-sticky{padding-bottom:72px}
 .foot-brand{font:600 28px/1 var(--display);margin:0 0 var(--s6)}
 .site-footer{padding:56px 0}
 .site-header .wrap{height:68px}
+
+.media-tag{left:50%;transform:translateX(-50%);white-space:nowrap}
+@media (max-width:520px){.media-tag{font-size:11px;padding:8px 12px;bottom:12px}}
