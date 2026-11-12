@@ -20,6 +20,7 @@ const vars = {
   YEAR: String(new Date().getFullYear()),
   BUILD_DATE: new Date().toISOString().slice(0, 10),
   HAS_VIDEO: existsSync('src/media/hero.mp4') ? '1' : '',
+  HAS_PHOTO: existsSync('src/media/hero.jpg') ? '1' : '',
 };
 
 rmSync('dist', { recursive: true, force: true });
@@ -33,9 +34,11 @@ const partials = Object.fromEntries(readdirSync('src/_partials').map(f => [f.rep
 rmSync('dist/_partials', { recursive: true, force: true });
 const missing = new Set();
 for (const file of walk('dist').filter(p => ['.html', '.xml', '.txt', '.js', '.json', '.webmanifest'].includes(extname(p)))) {
-  const out = readFileSync(file, 'utf8')
+  const cond = /<!-- @if (\w+) -->([\s\S]*?)<!-- @else \1 -->([\s\S]*?)<!-- @endif \1 -->/g;
+  let src = readFileSync(file, 'utf8');
+  while (cond.test(src)) src = src.replace(cond, (m, n, a, b) => (vars['HAS_' + n] ? a : b));
+  const out = src
     .replace(/<!-- @include (\w+) -->/g, (m, n) => partials[n] ?? (missing.add('partial:' + n), m))
-    .replace(/<!-- @if VIDEO -->([\s\S]*?)<!-- @else -->([\s\S]*?)<!-- @endif -->/g, (m, a, b) => (vars.HAS_VIDEO ? a : b))
     .replace(/%%([A-Z_]+)%%/g, (m, k) => (k in vars ? vars[k] : (missing.add(k), m)));
   writeFileSync(file, out);
 }
