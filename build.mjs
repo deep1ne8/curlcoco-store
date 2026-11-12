@@ -50,4 +50,15 @@ writeFileSync('functions/_lib/catalog.js',
   `export const CATALOG = ${JSON.stringify({ 'curl-set': { name: cfg.PRODUCT_NAME, priceCents: cfg.PRICE_ZAR * 100 } }, null, 2)};\n` +
   `export const SITE_URL = ${JSON.stringify(cfg.SITE_URL)};\nexport const BRAND = ${JSON.stringify(cfg.BRAND)};\n` +
   `export const DELIVERY_ESTIMATE = ${JSON.stringify(cfg.DELIVERY_ESTIMATE)};\n`);
+// Cache-bust CSS/JS: /assets/* is served "immutable", so every change needs a new URL.
+{
+  const { createHash } = await import('node:crypto');
+  const ver = f => createHash('sha256').update(readFileSync(join('dist', f))).digest('hex').slice(0, 10);
+  const map = { '/assets/css/site.css': ver('assets/css/site.css'), '/assets/js/site.js': ver('assets/js/site.js') };
+  for (const file of walk('dist').filter(p => p.endsWith('.html'))) {
+    let h = readFileSync(file, 'utf8');
+    for (const [u, v] of Object.entries(map)) h = h.split(`"${u}"`).join(`"${u}?v=${v}"`);
+    writeFileSync(file, h);
+  }
+}
 console.log(`✔ Built dist/ (${walk('dist').length} files)`);
