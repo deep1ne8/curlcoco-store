@@ -9,7 +9,7 @@ import { onRequestPost as subscribe } from '../functions/api/subscribe.js';
 
 let calls;
 const kv = () => { const m = new Map(); return { get: async k => m.get(k) ?? null, put: async (k, v) => { m.set(k, v); } }; };
-const env = () => ({ PAYSTACK_SECRET_KEY: 'sk_test_x', BREVO_API_KEY: 'b', BREVO_SENDER_EMAIL: 's@x.co', OWNER_EMAIL: 'o@x.co', BREVO_LIST_NEWSLETTER: '2', BREVO_LIST_CHECKOUT: '3', BREVO_LIST_CUSTOMERS: '4', ORDERS: kv() });
+const env = () => ({ PAYMENT_PROVIDER: 'paystack', PAYSTACK_SECRET_KEY: 'sk_test_x', BREVO_API_KEY: 'b', BREVO_SENDER_EMAIL: 's@x.co', OWNER_EMAIL: 'o@x.co', BREVO_LIST_NEWSLETTER: '2', BREVO_LIST_CHECKOUT: '3', BREVO_LIST_CUSTOMERS: '4', ORDERS: kv() });
 const ctx = (request, e = env()) => ({ request, env: e, waitUntil: p => p });
 const tx = { status: 'success', currency: 'ZAR', reference: 'ref_123456', amount: 49800, channel: 'card', customer: { email: 'buyer@example.com' },
   metadata: { customer: { name: 'Thandi M', street: '1 Main Rd', suburb: 'Sea Point', city: 'Cape Town', postal: '8005', province: 'Western Cape', phone: '0821234567' }, items: [{ sku: 'curl-set', qty: 2 }], marketing: true } };

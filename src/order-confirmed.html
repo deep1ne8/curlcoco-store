@@ -9,7 +9,7 @@
 <!-- @include header -->
 <main id="main" class="wrap prose">
   <div id="confirm" aria-live="polite">
-    <div data-state="loading"><h1>Checking your payment…</h1><p>One moment while we confirm with Paystack.</p></div>
+    <div data-state="loading"><h1>Checking your payment…</h1><p>One moment while we confirm with %%PAY_PROVIDER%%.</p></div>
     <div data-state="success" hidden>
       <h1>Thank you, your order is in</h1>
       <dl class="details">
@@ -25,7 +25,8 @@
       </ol>
       <p>You may cancel within 7 days of delivery. See <a href="/returns">Returns &amp; refunds</a>. Questions? <a href="/contact">Contact us</a> and quote your order reference.</p>
     </div>
-    <div data-state="failed" hidden><h1>We couldn't confirm this payment</h1><p>If money left your account, don't worry: <a href="/contact">contact us</a> with the reference in your Paystack email and we'll sort it out. Otherwise you can <a href="/">try again</a>.</p></div>
+    <div data-state="pending" hidden><h1>Payment received, confirming…</h1><p>Your payment provider hasn't confirmed the payment with us yet. You'll get a confirmation email as soon as it does, usually within minutes. There's no need to pay again.</p></div>
+    <div data-state="failed" hidden><h1>We couldn't confirm this payment</h1><p>If money left your account, don't worry: <a href="/contact">contact us</a> with the reference in your %%PAY_PROVIDER%% email and we'll sort it out. Otherwise you can <a href="/">try again</a>.</p></div>
     <div data-state="missing" hidden><h1>No order found</h1><p>This page needs an order reference. <a href="/">Back to the shop</a>.</p></div>
   </div>
 </main>

@@ -17,5 +17,8 @@
   "SPEC_ROD": "Foam rod with a soft cloth cover, about 3 cm thick and 100 cm long (sizes may vary by 1–2 cm)",
   "SPEC_IN_BOX": "1 curling rod, 2 scrunchie hair ties and 1 hair clip",
   "META_PIXEL_ID": "",
-  "TIKTOK_PIXEL_ID": ""
+  "TIKTOK_PIXEL_ID": "",
+  "PAYMENT_PROVIDER": "payfast",
+  "PAY_PROVIDER": "PayFast",
+  "PAY_METHODS": "card, Instant EFT and the other options shown on PayFast's secure page"
 }

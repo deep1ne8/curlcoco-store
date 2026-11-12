@@ -8,3 +8,4 @@ export const CATALOG = {
 export const SITE_URL = "https://shop.deepevolution.za.net";
 export const BRAND = "CurlCoco";
 export const DELIVERY_ESTIMATE = "11–18 days (about 2–3 weeks)";
+export const PAYMENT_PROVIDER = "payfast";

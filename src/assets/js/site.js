@@ -114,11 +114,16 @@
       try {
         const r = await fetch('/api/checkout', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
         const j = await r.json();
-        if (!r.ok || !j.url) throw new Error(j.error || 'Checkout is unavailable right now.');
+        if (!r.ok || !(j.url || j.form)) throw new Error(j.error || 'Checkout is unavailable right now.');
+        if (j.form) { // PayFast: hosted page needs a form POST
+          const f = document.createElement('form'); f.method = 'POST'; f.action = j.form.action;
+          for (const [k, v] of j.form.fields) { const i = document.createElement('input'); i.type = 'hidden'; i.name = k; i.value = v; f.appendChild(i); }
+          document.body.appendChild(f); f.submit(); return;
+        }
         window.location.assign(j.url);
       } catch (ex) {
         err.textContent = ex.message + ' Nothing was charged. Please try again or contact us.';
-        btn.disabled = false; btn.textContent = 'Pay securely with Paystack';
+        btn.disabled = false; btn.textContent = 'Pay securely';
       }
     });
   }
@@ -153,8 +158,13 @@
     const show = id => { $$('[data-state]', box).forEach(el => { el.hidden = el.dataset.state !== id; }); };
     if (!ref) { show('missing'); return; }
     try {
-      const r = await fetch('/api/verify?reference=' + encodeURIComponent(ref));
-      const j = await r.json();
+      let j;
+      for (let i = 0; i < 10; i++) { // PayFast confirms in the background: wait for it briefly
+        j = await (await fetch('/api/verify?reference=' + encodeURIComponent(ref))).json();
+        if (j.status !== 'pending') break;
+        await new Promise(r => setTimeout(r, 3000));
+      }
+      if (j.status === 'pending') { show('pending'); return; }
       if (j.status === 'success') {
         $('#order-ref').textContent = j.reference;
         $('#order-total').textContent = fmt(j.amount / 100);

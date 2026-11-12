@@ -4,6 +4,6 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   X-Frame-Options: DENY
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://connect.facebook.net https://analytics.tiktok.com https://static.cloudflareinsights.com; connect-src 'self' https://*.facebook.com https://*.tiktok.com https://*.tiktokw.us https://cloudflareinsights.com; img-src 'self' data: https://www.facebook.com https://*.tiktok.com; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://connect.facebook.net https://analytics.tiktok.com https://static.cloudflareinsights.com; connect-src 'self' https://*.facebook.com https://*.tiktok.com https://*.tiktokw.us https://cloudflareinsights.com; img-src 'self' data: https://www.facebook.com https://*.tiktok.com; style-src 'self' 'unsafe-inline'; font-src 'self'; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://www.payfast.co.za https://sandbox.payfast.co.za
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

@@ -24,7 +24,7 @@
 </script>
 </head>
 <body>
-<div class="topbar"><div class="wrap">Free delivery in South Africa<span class="extra"> <span aria-hidden="true">·</span> Secure checkout with Paystack <span aria-hidden="true">·</span> 7-day cooling-off on every order</span></div></div>
+<div class="topbar"><div class="wrap">Free delivery in South Africa<span class="extra"> <span aria-hidden="true">·</span> Secure checkout with %%PAY_PROVIDER%% <span aria-hidden="true">·</span> 7-day cooling-off on every order</span></div></div>
 <!-- @include header -->
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
@@ -37,7 +37,7 @@
           <div class="price-row"><span class="price">%%PRICE_DISPLAY%%</span><span class="price-note">Free delivery · 4-piece set</span></div>
           <button class="btn btn-lg" type="button" id="hero-buy" data-add>Add to cart</button>
           <ul class="trust">
-            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Secure payment by card, Instant EFT or Capitec Pay</span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Secure payment by %%PAY_METHODS%%</span></li>
             <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3v3.5h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>Estimated delivery %%DELIVERY_ESTIMATE%%, tracked</span></li>
             <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h11a5 5 0 0 1 0 10H8"/><path d="M8 5 4 9l4 4"/></svg><span>7 days to change your mind after delivery</span></li>
           </ul>
@@ -144,7 +144,7 @@
         <h2 id="faq-title">Before you buy</h2>
         <details><summary>How long does delivery take?</summary><div><p>Estimated %%DELIVERY_ESTIMATE%%. We don't hold stock: your order ships from %%DISPATCH_FROM%%. We email your tracking number as soon as we have it. See <a href="/shipping">Shipping</a>.</p></div></details>
         <details><summary>Can I return it?</summary><div><p>Yes. You have 7 days after delivery to cancel for any reason, and faulty items are covered for 6 months under the Consumer Protection Act. See <a href="/returns">Returns &amp; refunds</a>.</p></div></details>
-        <details><summary>How do I pay?</summary><div><p>By card, Instant EFT or Capitec Pay on Paystack's secure page. We never see or store your card details.</p></div></details>
+        <details><summary>How do I pay?</summary><div><p>By %%PAY_METHODS%% on %%PAY_PROVIDER%%'s secure page. We never see or store your card details.</p></div></details>
         <details><summary>Is a clip included?</summary><div><p>Yes. The set comes with one hair clip to hold the rod in place, plus two scrunchie hair ties for the ends.</p></div></details>
         <details><summary>Who are you?</summary><div><p>%%BRAND%% is a small South African online shop. Our full business details are on the <a href="/contact">Contact</a> page.</p></div></details>
       </div>
@@ -213,8 +213,8 @@
       <label class="check"><input type="checkbox" name="terms" required> <span>I accept the <a href="/terms" target="_blank" rel="noopener">Terms</a> and understand the estimated delivery time (%%DELIVERY_ESTIMATE%%).</span></label>
       <label class="check"><input type="checkbox" name="marketing"> <span>Email me tips and offers (optional, unsubscribe any time).</span></label>
       <p id="checkout-error" class="error" role="alert"></p>
-      <button class="btn btn-block" type="submit">Pay securely with Paystack</button>
-      <p class="small" style="margin-top:var(--s2)">You'll be taken to Paystack to pay by card, Instant EFT or Capitec Pay.</p>
+      <button class="btn btn-block" type="submit">Pay securely</button>
+      <p class="small" style="margin-top:var(--s2)">You'll be taken to our payment provider's secure page to pay.</p>
     </form>
   </div>
 </div>

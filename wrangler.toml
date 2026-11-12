@@ -5,3 +5,13 @@ compatibility_date = "2026-10-01"
 [[kv_namespaces]]
 binding = "ORDERS"
 id = "1202364823c94a3f81e6c406a09dcad4"
+
+# Preview deployments (any branch except main) use the public PayFast sandbox. Production gets no
+# payment settings here: its keys are set as encrypted secrets in the Cloudflare dashboard.
+[env.preview.vars]
+PAYMENT_PROVIDER = "payfast"
+PAYFAST_SANDBOX = "true"
+
+[[env.preview.kv_namespaces]]
+binding = "ORDERS"
+id = "1202364823c94a3f81e6c406a09dcad4"
