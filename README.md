@@ -36,7 +36,7 @@ test/                ← node --test with Paystack and Brevo mocked
 Fill in every `TODO` in `site.config.json`:
 
 - [ ] `LEGAL_NAME`, `PHYSICAL_ADDRESS`, `CONTACT_EMAIL`, `CONTACT_PHONE`, `INFO_OFFICER`. The ECT Act (s43) requires these to be shown.
-- [ ] `DELIVERY_ESTIMATE`, `SPEC_ROD`, `SPEC_WEIGHT`, `SPEC_IN_BOX`, taken from the supplier listing.
+- [ ] `DELIVERY_ESTIMATE`, `SPEC_ROD`, `SPEC_IN_BOX`, taken from the supplier listing.
 - [ ] Optional: `META_PIXEL_ID`, `TIKTOK_PIXEL_ID`. The cookie banner only appears once one of these is set.
 - [ ] Optional: your own video at `src/media/hero.mp4` plus `src/media/hero-poster.jpg`. It replaces the illustration automatically.
 
