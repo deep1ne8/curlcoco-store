@@ -48,7 +48,7 @@
         <video autoplay muted loop playsinline preload="metadata" poster="/media/hero-poster.jpg" aria-label="Wrapping hair around the curling rod at night and shaking out curls in the morning"><source src="/media/hero.mp4" type="video/mp4"></video>
 <!-- @else VIDEO -->
 <!-- @if PHOTO -->
-        <img src="/media/hero.jpg" width="1040" height="1120" alt="The CurlCoco heatless curling rod with two scrunchies" fetchpriority="high">
+        <picture><source srcset="/media/hero.webp" type="image/webp"><img src="/media/hero.jpg" width="1040" height="1120" alt="Pink heatless curling rod looped into a ribbon shape, with two scrunchie hair ties and a pink hair clip" fetchpriority="high"></picture>
 <!-- @else PHOTO -->
         <svg viewBox="0 0 520 560" role="img" aria-labelledby="ill-title">
           <title id="ill-title">Illustration of the curling rod looped into a ribbon shape, with two scrunchies</title>
@@ -132,10 +132,12 @@
         <table class="specs"><tbody>
           <tr><th scope="row">Included</th><td>%%SPEC_IN_BOX%%</td></tr>
           <tr><th scope="row">Rod</th><td>%%SPEC_ROD%%</td></tr>
+          <tr><th scope="row">Colour</th><td>Pink, as shown (colour may look slightly different on your screen)</td></tr>
           <tr><th scope="row">Made in</th><td>China</td></tr>
           <tr><th scope="row">Brand</th><td>Unbranded product, sold by %%BRAND%%</td></tr>
           <tr><th scope="row">Delivery</th><td>Free, %%DELIVERY_ESTIMATE%%. Ships from %%DISPATCH_FROM%% in the supplier's packaging.</td></tr>
         </tbody></table>
+          <figure class="closeup"><img src="/media/end-closeup.jpg" width="488" height="612" loading="lazy" alt="Close-up of the rod end, where the cloth cover is stitched closed"><figcaption>The cloth cover is stitched closed at each end. Photos: supplier product photos.</figcaption></figure>
       </div>
       <div class="faq">
         <p class="eyebrow">Questions</p>
